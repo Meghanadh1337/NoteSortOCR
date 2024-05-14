@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download</title>
+    <style>
+        .name{
+            color:aqua;
+            border-color: brown;
+            border-style: groove;
+        }
+        body{
+            background-color: blanchedalmond;
+            color:lightcoral;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>Download Zip Files</h1>
@@ -12,5 +24,9 @@
             <li><a href="/download/{{ zip_file }}">{{ zip_file }}</a></li>
         {% endfor %}
     </ul>
+
+    <h1 class="name">
+        Developed By Sai Meghanadh Ganta
+        </h1>
 </body>
 </html>

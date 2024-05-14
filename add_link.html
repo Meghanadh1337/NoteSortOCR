@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Link</title>
+</head>
+<body>
+    <h1>Add Link for Cluster {{ cluster }}</h1>
+    <form action="/add_link/{{ cluster }}" method="POST">
+        <label for="link">Link:</label>
+        <input type="text" id="link" name="link">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

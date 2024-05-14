@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notesort</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Add your CSS styles here */
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 10;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .moving-border {
+            width: 200px;
+            height: 300px;
+            position: relative;
+            background: #FFFFFF;
+            padding: 4px;
+        }
+
+        .moving-border::before,
+        .moving-border::after {
+            content: "";
+            position: absolute;
+            inset: -0.2rem;
+            z-index: -1;
+            background: linear-gradient(var(--angle), #032146, #C3F2FF, #b00);
+            animation: rotate 10s linear infinite;
+        }
+
+        .moving-border::after {
+            filter: blur(10px);
+        }
+
+        @keyframes rotate {
+            0% {
+                --angle: 0deg;
+            }
+
+            100% {
+                --angle: 360deg;
+            }
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .upload-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .upload-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .upload-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .name{
+            border-style:solid;
+            border-color:lightgreen;
+            color:#0056b3;
+        }
+        #file-names {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="moving-border">
+        <h1 class="main-title">Notesort</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="upload-container">
+                <i class="upload-icon fas fa-cloud-upload-alt"></i>
+                <label for="file-upload" class="upload-button">Upload Files</label>
+                <input id="file-upload" name="file" type="file" style="display: none;" multiple>
+                <div id="file-names"></div>
+            </div>
+            <button type="submit" class="upload-button">Upload and Process</button>
+        </form>
+    </div>
+</div>
+
+<div class="project-details">
+    <div class="container">
+        <h2>Project Details</h2>
+        <div class="functionality">
+            <h3>Sort Functionality</h3>
+            <p>The sort functionality utilizes codes of the form <strong>"#A" followed by a number</strong>. It processes a queue of images belonging to different clusters and sorts them into the required format based on the provided codes.</p>
+        </div>
+        <div class="functionality">
+            <h3>Link Functionality</h3>
+            <p>The link functionality uses codes of the form <strong>"#X" followed by a number</strong>. It serves two purposes:</p>
+            <ol>
+                <li>Redirects users to the relevant website associated with the link if available.</li>
+                <li>Allows users to add a link if the code is not yet associated with any details.</li>
+            </ol>
+        </div>
+        <div class="requirements">
+            <h3>Requirements to Run the Program</h3>
+            <p>We require a <strong>code handwritten clearly</strong> at the top of the page. It must be mandatorily enclosed in a rectangle border.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function displayFileNames() {
+        const fileInput = document.getElementById('file-upload');
+        const fileNamesDiv = document.getElementById('file-names');
+        fileNamesDiv.innerHTML = '';
+        if (fileInput.files.length > 0) {
+            for (let i = 0; i < fileInput.files.length; i++) {
+                const fileName = fileInput.files[i].name;
+                const fileNameElement = document.createElement('p');
+                fileNameElement.textContent = fileName;
+                fileNamesDiv.appendChild(fileNameElement);
+            }
+        } else {
+            fileNamesDiv.textContent = 'No files selected';
+        }
+    }
+
+    // Call displayFileNames when files are selected
+    document.getElementById('file-upload').addEventListener('change', displayFileNames);
+</script>
+
+
+<h1 class="name">
+    Developed By Sai Meghanadh Ganta
+    </h1>
+</body>
+</html>

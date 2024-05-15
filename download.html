@@ -5,28 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download</title>
     <style>
-        .name{
-            color:aqua;
-            border-color: brown;
-            border-style: groove;
+        body {
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #2c3e50;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
-        body{
-            background-color: blanchedalmond;
-            color:lightcoral;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .download-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .download-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .download-container li {
+            margin: 10px 0;
+        }
+        .download-container a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        .download-container a:hover {
+            color: #2980b9;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .footer .name {
+            font-weight: bold;
+            color: #e74c3c;
+            border: 2px solid #e74c3c;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
     <h1>Download Zip Files</h1>
-    <ul>
-        {% for zip_file in zip_files %}
-            <li><a href="/download/{{ zip_file }}">{{ zip_file }}</a></li>
-        {% endfor %}
-    </ul>
-
-    <h1 class="name">
-        Developed By Sai Meghanadh Ganta
-        </h1>
+    <div class="download-container">
+        <ul>
+            {% for zip_file in zip_files %}
+                <li><a href="/download/{{ zip_file }}">{{ zip_file }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="footer">
+        Developed By <span class="name">Sai Meghanadh Ganta</span>
+    </div>
 </body>
 </html>

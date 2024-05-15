@@ -11,7 +11,9 @@ Imagine you have a pile of handwritten notes from various sources and you need t
 Notesort leverages state-of-the-art OCR algorithms to extract text from handwritten notes. It then analyzes the content to identify patterns or codes that indicate sorting instructions. For example, Notesort recognizes codes like #A1 or #X2, where A and X represent different functionalities, and 1 and 2 denote clusters or categories.
 
 <h1>Key Features:</h1>
+<break>
 <i>Automated Sorting</i>: Notesort automatically sorts handwritten notes into different clusters based on predefined codes.
+<break>
 <i>Link Functionality</i>: With link functionality, Notesort can redirect users to relevant websites associated with specific codes.
 Easy Integration: Seamlessly integrate Notesort into your workflow with its intuitive user interface and straightforward file upload process.
 Customizable: Tailor Notesort to your specific needs by defining your own sorting criteria and functionalities.

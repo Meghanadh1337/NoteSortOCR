@@ -4,10 +4,10 @@ Notesort: Organize Your Notes Effortlessly
 
 Welcome to Notesort, your ultimate solution for organizing handwritten notes seamlessly! Notesort is a web application designed to streamline the process of sorting and managing handwritten notes using advanced OCR (Optical Character Recognition) technology.
 
-<h1>What is Notesort?<h1>
+<h1>What is Notesort?</h1>
 Imagine you have a pile of handwritten notes from various sources and you need to categorize them based on specific criteria. This could be a daunting task, right? Well, not anymore! Notesort is here to simplify your life. With just a few clicks, you can upload your handwritten notes and let Notesort do the rest.
 
-How Does it Work?
+<h1 style:color='red'>How Does it Work?</h1>
 Notesort leverages state-of-the-art OCR algorithms to extract text from handwritten notes. It then analyzes the content to identify patterns or codes that indicate sorting instructions. For example, Notesort recognizes codes like #A1 or #X2, where A and X represent different functionalities, and 1 and 2 denote clusters or categories.
 
 Key Features:

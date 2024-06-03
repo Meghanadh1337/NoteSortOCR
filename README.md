@@ -1,7 +1,7 @@
 # NoteSortOCR
 
 Notesort: Organize Your Notes Effortlessly
-![2024-06-03-14-03-33-https-htmledit-squarefree-com](https://github.com/Meghanadh1337/NoteSortOCR/assets/116261133/3c434192-3b4b-47d4-b26b-4efb1b61d5a1)
+![2024-06-03-14-03-33-https-htmledit-squarefree-com](https://github.com/Meghanadh1337/NoteSortOCR/assets/116261133/40d664d5-6fd1-4f20-b6df-df16d18c351b)
 
 Welcome to Notesort, your ultimate solution for organizing handwritten notes seamlessly! Notesort is a web application designed to streamline the process of sorting and managing handwritten notes using advanced OCR (Optical Character Recognition) technology.
 
